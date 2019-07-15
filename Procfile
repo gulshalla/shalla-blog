@@ -1,1 +1,1 @@
-web: flask translate compile; gunicorn shalla-blog:blog
+web: gunicorn blog:blog
