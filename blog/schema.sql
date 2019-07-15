@@ -7,7 +7,7 @@ create table user (
     password text not null
 );
 
-create table pos (
+create table post (
     id integer primary key autoincrement,
     author_id integer not null,
     created timestamp not null default current_timestamp,

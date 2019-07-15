@@ -24,10 +24,17 @@ def create_app(test_config = None):
 
     @app.route('/hello')
     def hello():
-        return 'Hello World!'
+        return 'Hello world!'
 
     from . import db 
     db.init_app(app)
+
+    from . import auth
+    app.register_blueprint(auth.bp)
+
+    from . import feed 
+    app.register_blueprint(feed.bp)
+    app.add_url_rule('/', endpoint = 'index')
 
     return app
 
