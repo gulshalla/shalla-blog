@@ -1,1 +1,1 @@
-web: flask init-db; gunicorn app
+web: flask init-db; gunicorn blog:blog
